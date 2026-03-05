@@ -74,7 +74,7 @@ def load_lama_celebahq(
         ]
     else:
         mask_dir = os.path.join(
-            os.getcwd(), f"datasets/Repaint_mask/{mask_type}")
+            os.getcwd(), f"./demo/mask/thick")
         mask_paths = _list_image_files_recursively(mask_dir)
         mask_paths.sort()
 
