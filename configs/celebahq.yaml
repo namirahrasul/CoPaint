@@ -8,11 +8,11 @@
 ########################################################################
 ##  basic configs
 ########################################################################
-model_path: ./checkpoints/celeba256_250000.pt
+model_path: ./pretrained/celeba256_250000.pt
 dataset_name: celeba-hq
 dataset_starting_index: -1 # specify the starting index, -1 means 0
 dataset_ending_index: -1 # specify the ending index, -1 means len(dataset)
-mask_type: half
+mask_type: thick
 seed: 42
 use_git: false
 n_samples: 10
