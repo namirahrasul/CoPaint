@@ -55,7 +55,7 @@ def load_lama_celebahq(
 ):
     """Load first 100 images in lama celeba test set"""
     gt_dir = os.path.join(
-        os.getcwd(), "./demo/image/")
+        os.getcwd(), "./demo/image/final/")
     gt_paths = _list_image_files_recursively(gt_dir)
     gt_paths.sort()
 
@@ -74,7 +74,7 @@ def load_lama_celebahq(
         ]
     else:
         mask_dir = os.path.join(
-            os.getcwd(), f"./demo/mask/thick")
+            os.getcwd(), f"./demo/mask/final")
         mask_paths = _list_image_files_recursively(mask_dir)
         mask_paths.sort()
 
