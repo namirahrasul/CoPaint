@@ -49,7 +49,7 @@ def load_celebahq(
 
 def load_lama_celebahq(
     offset=0,
-    max_len=1000,
+    max_len=89,
     shape=(256, 256),
     mask_type="thick",
 ):
