@@ -38,14 +38,14 @@ def normalize_arr(arr_image):
 def load_imagenet(
     offset=0, max_len=80, shape=(256, 256), mask_type="half", split="test"
 ):
-    gt_dir = os.path.join(os.getcwd(), f"./datasets/imagenet100/test/")
+    gt_dir = "/kaggle/working/copaint/datasets/imagenet100/test/"
     gt_paths = _list_image_files_recursively(gt_dir)
     gt_paths.sort()
 
     def load_image(path): return normalize_arr(
         center_crop_arr(Image.open(path).convert("RGB"), shape[0])
     )
-    rawlabels = json.load(open(os.path.join(gt_dir, f"../val_label.json")))
+    rawlabels = json.load(open("/kaggle/working/copaint/datasets/imagenet100/val_label.json"))
     labels = {}
     for k, v in rawlabels.items():
         k = k.replace("_val_", "_test_")
@@ -66,8 +66,7 @@ def load_imagenet(
         ]
     else:
         # thin/thick masks
-        mask_dir = os.path.join(
-            os.getcwd(), f"./demo/mask/final")
+        mask_dir = "/kaggle/working/copaint/demo/mask/final"
         mask_paths = _list_image_files_recursively(mask_dir)
         mask_paths.sort()
 
