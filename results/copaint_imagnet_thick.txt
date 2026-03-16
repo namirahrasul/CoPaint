@@ -1,0 +1,9 @@
+Average Loss: 19.863
+
+Average Time: 486.139 seconds
+
+Average LPIPS Score: 0.141
+
+Average PSNR Score: 22.111
+
+Average SSIM Score: 0.832
