@@ -38,8 +38,7 @@ def normalize_arr(arr_image):
 def load_imagenet(
     offset=0, max_len=80, shape=(256, 256), mask_type="half", split="test"
 ):
-    gt_dir = os.path.join(
-        os.getcwd(), "./demo/image/final/")
+    gt_dir = os.path.join(os.getcwd(), f"./datasets/imagenet100/test/")
     gt_paths = _list_image_files_recursively(gt_dir)
     gt_paths.sort()
 
